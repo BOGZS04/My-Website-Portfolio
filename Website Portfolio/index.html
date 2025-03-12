@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aa43454030.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/BOGZS-logo.png" alt="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i> 
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Yo, I'm <span>Edgar</span><br>Manderico from the Philippines</h1>
+            <p class="type">I am a <span></span></p>
+        </div>
+    </div>
+</div>
+
+<!--About-->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/about.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello! I'm Edgar Manderico, a dedicated software engineer with a passion for developing innovative solutions that enhance user experiences. My journey in tech began with a fascination for problem-solving and creativity, leading me to collaborate on diverse projects that challenge my skills and broaden my knowledge. Outside of coding, I enjoy hiking, photography, and exploring new technologies. I'm excited to connect with others and contribute to impactful projects that make a difference!</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Buidling Android/IOS Apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021 - Current</span><br>UI/UX Training at ET Institute</li>
+                        <li><span>2019 - 2021</span><br>Team Lead at StarApp LLC.</li>
+                        <li><span>2017 - 2019</span><br>UI/UX Designing Executive at Coin Digital Ltd.</li>
+                        <li><span>2016 - 2017</span><br>Internship at ekart eCommerece</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
+                        <li><span>2016</span><br>MBA from MIT Bangalore</li>
+                        <li><span>2014</span><br>BBA from ISM Bangalore</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <title>Animated Skills Bar</title>
+    <div class="container">
+        <h1 class="sub-title" style="font-size: 30px;">My Skills</h1>
+    </div>
+    <div id="skill-bar">
+        <div class="container-skills">
+            <div class="skill-box">
+                <span class="title">HTML <i class="fa-brands fa-html5"></i></span>
+                <div class="skill-bar">
+                    <span class="skill-per html" data-skill="90%">
+                        <span class="tooltip">90%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">CSS <i class="fa-brands fa-css3-alt"></i></span>
+                <div class="skill-bar">
+                    <span class="skill-per css" data-skill="80%">
+                        <span class="tooltip">80%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">JavaScript <i class="fa-brands fa-js"></i></span>
+                <div class="skill-bar">
+                    <span class="skill-per javascript" data-skill="50%">
+                        <span class="tooltip">50%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">React <i class="fa-brands fa-react"></i></span>
+                <div class="skill-bar">
+                    <span class="skill-per nodejs" data-skill="30%">
+                        <span class="tooltip">30%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">Adobe Photosop <i class="fa-solid fa-camera"></i></span>
+                <div class="skill-bar">
+                    <span class="skill-per nodejs" data-skill="60%">
+                        <span class="tooltip">60%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">Adobe Premiere Pro <i class="fa-solid fa-video"></i></span>
+                <div class="skill-bar">
+                    <span class="skill-per nodejs" data-skill="90%">
+                        <span class="tooltip">90%</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Services With Slider-->
+<div id="services">
+<div class="container">
+    <h1 class="sub-title">Services</h1>
+</div>
+<div class="card-slider">
+<div class="container swiper">
+    <div class="card-wrapper">
+      <!-- Card slides container -->
+      <ul class="card-list swiper-wrapper">
+        <li class="card-item swiper-slide">
+          <a href="https://drive.google.com/drive/u/0/folders/1UrXkIIt9pcDkE5EnQ_JwLseCyflsaN8E" class="card-link">
+            <img src="Images/web-dev.webp" alt="Card Image" class="card-image">
+            <p class="badge badge-designer">Web Developer</p>
+            <h2 class="card-title">As a web developer, I craft visually engaging, user-centered websites that combine intuitive design with seamless functionality to enhance the online experience and effectively communicate brand identity.</h2>
+            <button class="card-button material-symbols-rounded">arrow_forward</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="https://drive.google.com/drive/u/0/folders/1UrXkIIt9pcDkE5EnQ_JwLseCyflsaN8E" class="card-link">
+            <img src="Images/graphic-design.avif" alt="Card Image" class="card-image">
+            <p class="badge badge-developer">Graphics Designer</p>
+            <h2 class="card-title">As a graphic designer, I create visually impactful designs that communicate brand messages with clarity and creativity, delivering cohesive, eye-catching graphics tailored to engage and inspire audiences.</h2>
+            <button class="card-button material-symbols-rounded">arrow_forward</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="https://drive.google.com/drive/u/0/folders/1UrXkIIt9pcDkE5EnQ_JwLseCyflsaN8E" class="card-link">
+            <img src="Images/video-editing.jpg" alt="Card Image" class="card-image">
+            <p class="badge badge-marketer">Video Editor</p>
+            <h2 class="card-title">As a video editor, I am passionate about bringing stories to life through the art of visual storytelling. My expertise lies in crafting compelling videos that will surely resonate deeply with audiences.</h2>
+            <button class="card-button material-symbols-rounded">arrow_forward</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="https://drive.google.com/drive/u/0/folders/1UrXkIIt9pcDkE5EnQ_JwLseCyflsaN8E" class="card-link">
+            <img src="Images/photographer.avif" alt="Card Image" class="card-image">
+            <p class="badge badge-gamer">Photographer</p>
+            <h2 class="card-title">As a passionate photographer, I have a keen eye for detail and a love composition, I create striking images that evoke emotions of the viwer. I transform everyday scenes into extraordinary visual narratives.</h2>
+            <button class="card-button material-symbols-rounded">arrow_forward</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="https://drive.google.com/drive/u/0/folders/1UrXkIIt9pcDkE5EnQ_JwLseCyflsaN8E" class="card-link">
+            <img src="Images/app-dev.webp" alt="Card Image" class="card-image">
+            <p class="badge badge-editor">App Developer</p>
+            <h2 class="card-title">As an app developer, I am dedicated to creating innovative and user-friendly applications that solve everyday problems. With expertise in various programming languages, I build seamless experiences.</h2>
+            <button class="card-button material-symbols-rounded">arrow_forward</button>
+          </a>
+        </li>
+      </ul>
+       <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Navigation Buttons -->
+      <div class="swiper-slide-button swiper-button-prev"></div>
+      <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+  </div>
+</div>
+  <!-- Linking SwiperJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Linking custom script -->
+  <script src="script.js"></script>
+</div>
+
+<!--Portfolio-->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/work3.png">
+                <div class="layer">
+                    <h3>Web Designing</h3>
+                    <p>As a web designer, I craft visually engaging, user-centered websites that combine intuitive design with seamless functionality to enhance the online experience and effectively communicate brand identity.</p>
+                    <a href="https://drive.google.com/drive/u/0/folders/1UrXkIIt9pcDkE5EnQ_JwLseCyflsaN8E"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work1.png">
+                <div class="layer">
+                    <h3>Graphic Designing</h3>
+                    <p>As a graphic designer, I create visually impactful designs that communicate brand messages with clarity and creativity, delivering cohesive, eye-catching graphics tailored to engage and inspire audiences.</p>
+                    <a href="https://drive.google.com/drive/u/0/folders/1UrXkIIt9pcDkE5EnQ_JwLseCyflsaN8E"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work2.png">
+                <div class="layer">
+                    <h3>Video Editing</h3>
+                    <p>As a video editor, I bring stories to life by creating compelling, polished videos that blend visual storytelling with precise editing techniques to engage and captivate audiences.</p>
+                    <a href="https://drive.google.com/drive/u/0/folders/1UrXkIIt9pcDkE5EnQ_JwLseCyflsaN8E"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://drive.google.com/drive/folders/1UrXkIIt9pcDkE5EnQ_JwLseCyflsaN8E?usp=sharing" class="btn">See More</a>
+    </div>
+</div>
+
+<!--Contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>mandericoprinceedgar@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>09700963464</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/princeedgar.manderico"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/biggie_eddy/"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://x.com/PrinceEd21"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/edgar-manderico-402778208/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="Images/my-cv.pdf" download class="btn btn2">Donwload CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright 2024 © Prince Edgar Manderico <i class="fa-solid fa-dog"></i>. All rights reserved.</p>
+    </div>
+
+
+
+</div>
+
+
+
+
+<script>
+
+//This is for the About Me Section where the information is displayed for "Skills, Experience, and Education"
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+//This is for the Sidemenu for the Smaller Screens
+
+    var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+        function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+//This is for the Scroll to Top Button
+
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+
+//This is for the Animated Skill Bars
+
+    // Select all skill bars
+const skillBars = document.querySelectorAll('.skill-per');
+
+// Function to handle the animation when the element comes into view
+const animateSkillBars = (entries) => {
+    entries.forEach(entry => {
+        const skillBar = entry.target;
+
+        if (entry.isIntersecting) {
+            // When the skill bar comes into view
+            skillBar.style.opacity = '1'; // Set opacity to 1
+            skillBar.style.width = skillBar.getAttribute('data-skill'); // Set width based on data attribute
+        } else {
+            // When the skill bar leaves the view
+            skillBar.style.opacity = '0'; // Set opacity to 0
+            skillBar.style.width = '0'; // Reset width to 0
+        }
+    });
+};
+
+// Create an intersection observer
+const observer = new IntersectionObserver(animateSkillBars, {
+    threshold: 0.1 // Trigger when 10% of the element is visible
+});
+
+// Observe each skill bar
+skillBars.forEach(skillBar => {
+    // Set initial styles
+    skillBar.style.opacity = '0'; // Start hidden
+    skillBar.style.width = '0'; // Set initial width to 0
+    observer.observe(skillBar); // Start observing
+});
+
+//This if for the "Type Writer Effect" at the Header"
+
+        const dynamicText = document.querySelector(".type span");
+const words = ["Website Developer", "Video Editor", "Graphics Designer", "Photographer", "App Developer", "Tech Enthusiast","Juicer - xqcL"];
+// Variables to track the position and deletion status of the word
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typeEffect = () => {
+    const currentWord = words[wordIndex];
+    const currentChar = currentWord.substring(0, charIndex);
+    dynamicText.textContent = currentChar;
+    dynamicText.classList.add("stop-blinking");
+    if (!isDeleting && charIndex < currentWord.length) {
+        // If condition is true, type the next character
+        charIndex++;
+        setTimeout(typeEffect, 90);
+    } else if (isDeleting && charIndex > 0) {
+        // If condition is true, remove the previous character
+        charIndex--;
+        setTimeout(typeEffect, 70);
+    } else {
+        // If word is deleted then switch to the next word
+        isDeleting = !isDeleting;
+        dynamicText.classList.remove("stop-blinking");
+        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+        setTimeout(typeEffect, 1200);
+    }
+}
+typeEffect();
+
+        new Swiper('.card-wrapper', {
+    loop: true,
+    spaceBetween: 30,
+    // Pagination bullets
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // Responsive breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+    }
+});
+    </script>
+
+</body>
+</html>
